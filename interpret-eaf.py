@@ -1,8 +1,16 @@
-import subprocess
-file_path = "C:\\Users\\kelse\\Desktop\\Testing\\clips\\Nahua-MML-191120-WishiPakedi.eaf"
-wav_file = "C:\\Users\\kelse\\Desktop\\Testing\\clips\\Nahua-MML-191120-WishiPakedi-mono.wav"
+##Interpret .eaf to produce .opus clips for ELAN 5.9##
+##Version 2021-05-01##
+##Kelsey C. Neely and Alexander Dougal##
 
-output_stem = "C:\\Users\\kelse\\Desktop\\Testing\\clips\\wavcliptest\\"
+import subprocess
+import glob
+import os
+
+file_path = "C:\\Users\\Kelsey\\Desktop\\Example\\Segments.eaf"
+wav_file = "C:\\Users\\Kelsey\\Desktop\\Example\\Audio.wav"
+
+output_stem = "C:\\Users\\Kelsey\\Desktop\\Example\\Clips\\"
+
 
 with open(file_path, 'r', encoding='utf-8') as file:
     data = file.read()
